@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Produtos</title>
+    </head>
+    <body>
+
+        <!-- div section é criada para agrupar todos os elementos na tela e não precisar alterar o css do body Obs: Essa div é praticamente um body-->
+        <div class="section">
+              
+            <!-- div container - criada para agrupar o formulário (labels e inputs) e botões -->
+            <div class="container" id="container">
+
+                <!-- div form - criada para agrupar todos os elementos do formulário labels e inputs -->
+                <div class="form">
+
+                    <!-- h1 - titulo -->
+                    <h1 class="titulo"> Cadastro de Produtos </h1>
+
+                    <!-- div form-row - criada para agrupar o label e o input para ficarem todas labels e inputs do mesmo tamanho -->
+                    <div class="form-row">
+                        <div class="label-input">
+                            <label  for="produto"> Nome Produto:</label>
+                        </div>
+                        <div class="input-form">
+                            <input type="text" id="produto" name="produto">
+                        </div>
+                    </div>
+
+                    <!-- div form-row - criada para agrupar o label e o input para ficarem todas labels e inputs do mesmo tamanho -->
+                    <div class="form-row">
+                        <div class="label-input">
+                            <label  for="quantidade"> Quantidade:</label>
+                        </div>
+                        <div class="input-form">
+                            <input type="number" id="quantidade" name="quantidade">
+                        </div>
+                    </div>
+
+                    <!-- div form-row - criada para agrupar o label e o input para ficarem todas labels e inputs do mesmo tamanho -->
+                    <div class="form-row">
+                        <div class="label-input">
+                            <label  for="preco"> Preço Unitário:</label>
+                        </div>
+                        <div class="input-form">
+                            <input type="number" id="preco" name="preco">
+                        </div>
+                    </div>
+
+                    <!-- div form-row - criada para agrupar o label e o input para ficarem todas labels e inputs do mesmo tamanho -->
+                    <div class="form-row">
+                        <div class="label-input">
+                            <label for="precototal"> Preço Total:</label>
+                        </div>
+                        <div class="input-form">
+                            <input type="number" id="precototal" name="precototal">
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- div buttons - criada para agrupar os botões na mesma linha-->
+                <div class="buttons">
+                    <button class="button" type="button" onclick="cadastrar()">Cadastrar</button>
+                    <button class="button" type="button" onclick="calcular()">Calcular</button>
+                </div>
+            </div>  
+
+                <!-- div container-produto - criada para agrupar todos os itens das listas de produtos -->
+            <div class="container-produto">
+            
+                <!-- div nomeProduto - para agrupar o titulo e a lista de produtos geradas pelo js -->
+                <div class="nomeProduto"> 
+                    <h2 class="tituloNomeProduto">Nome do produto</h2>
+                    <ul id="nomeProduto"></ul>
+                </div>
+                
+                <!-- div quantidade - para agrupar o titulo e a lista de produtos geradas pelo js -->
+                <div class="quantidade">
+                    <h2 class="tituloQuantidade">Quantidade</h2>
+                    <ul id="ulQuantidade"></ul>
+                </div>
+
+                 <!-- div quantidade - para agrupar o titulo e a lista de produtos geradas pelo js -->
+                <div class="valorUnitario">
+                    <h2 class="tituloValorUnitario">Valor unitário </h2>
+                    <ul id="valorUnitario"></ul>
+                </div>
+            
+            </div>
+        </div>
+
+    
+        <script src="script.js"></script>
+    
+    </body>
+</html>
